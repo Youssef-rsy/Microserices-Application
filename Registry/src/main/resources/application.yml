@@ -1,0 +1,18 @@
+# Configure this Discovery Server
+eureka:
+  instance:
+    hostname: localhost
+  client:  # Not a client, don't register with yourself (unless running
+           # multiple discovery servers for redundancy)
+    registerWithEureka: false
+    fetchRegistry: false
+
+server:
+  port: 8761   # HTTP (Tomcat) port default 8761
+  
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
