@@ -7,17 +7,16 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
+import org.springframework.context.annotation.ComponentScan;
+
+import RabbitMQ.BooksReceiver;
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @SpringBootApplication
-@EnableBinding(Sink.class)
+@ComponentScan(basePackageClasses=BooksReceiver.class)
 public class ReadersApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ReadersApplication.class, args);
-	}
-	@StreamListener(target = Sink.INPUT)
-	public void ProcessRegisterBooks(String books) {
-		System.out.println(" Readers boot classe -> message from RabbitMQ :"+books);
 	}
 }

@@ -6,7 +6,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
+@Configuration
 @EnableBinding(Sink.class)
 public class BooksReceiver {
 

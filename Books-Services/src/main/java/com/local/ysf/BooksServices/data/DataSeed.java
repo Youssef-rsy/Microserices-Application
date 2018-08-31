@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import com.local.ysf.BooksServices.books_domaine.entity.Books;
 import com.local.ysf.BooksServices.books_infrastructure.BooksRepository;
 
-@Component
+//@Component
 public class DataSeed {
 
 	
