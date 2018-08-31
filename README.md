@@ -2,6 +2,9 @@
 
 in this example you will see how to make microservice architecture based on spring cloud as follow:
 ?
+
+
+
 you will  see :
   - how to centralize configuration 
   - how to register microservices using Eureka
